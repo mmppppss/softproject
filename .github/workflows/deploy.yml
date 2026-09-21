@@ -1,0 +1,58 @@
+# Compila el sitio Astro y publica el resultado en la rama `build`
+# para GitHub Pages (Configuración del repo → Pages → Deploy from a branch → build / (root)).
+name: Deploy static content to Pages
+
+on:
+  # Ejecuta al hacer push a la rama por defecto
+  push:
+    branches: ["main"]
+  # Permite ejecución manual desde la pestaña Actions
+  workflow_dispatch:
+
+# Permisos: escritura en el repo para crear/forzar la rama `build`
+permissions:
+  contents: write
+
+# Una única ejecución en curso; las encoladas se cancelan
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static site
+        run: pnpm build
+
+      - name: Verify build output
+        run: test -d dist && test -f dist/index.html && test -f dist/en/index.html
+
+      - name: Publish to `build` branch
+        run: |
+          git branch -D build 2>/dev/null || true
+          git switch --orphan build
+          git rm -rf . >/dev/null 2>&1 || true
+          cp -r dist/. ./
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "deploy(${GITHUB_SHA}): publicar build estático"
+          git push origin build --force

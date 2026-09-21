@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@12.4.2",
   "description": "Sitio web corporativo de softproject — desarrollo web, móvil, escritorio y mantenimiento",
   "scripts": {
     "dev": "astro dev",

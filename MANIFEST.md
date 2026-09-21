@@ -96,8 +96,12 @@ src/
 ## Trabajo futuro recomendado
 
 1. **Datos reales de contacto** en `src/site.config.ts` (WhatsApp, email, Facebook).
-2. **Proyectos reales** en `src/i18n/ui.ts` → `projects.items`.
-3. **Despliegue** a softproject.qzz.io (Cloudflare Pages / Netlify / Vercel / VPS + nginx).
+2. **Proyectos reales** en `src/i18n/ui.ts` → `projects.items` (rellenar `url` para que
+   aparezca el enlace "Ver proyecto").
+3. **Despliegue GH Pages**: el workflow `.github/workflows/deploy.yml` compila con pnpm y
+   publica `dist/` en la rama `build`. En el repo: Settings → Pages → "Deploy from a branch" →
+   `build` / `(root)`. Para ir a softproject.qzz.io, apuntar el CNAME del dominio al repo
+   (método de acceso raíz) o añadir `public/CNAME`.
 4. Sustituir el icono genérico de Facebook (`social`) por el logo SVG oficial de la marca
    si el cliente lo pide.
 5. Nuevo tema listo para crear clones en `src/styles/themes/` (ver guía de color).
