@@ -1,0 +1,83 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+import siteConfig from '../site.config';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const channels = [
+  {
+    icon: 'chat' as const,
+    title: t(locale, 'contact.whatsappTitle'),
+    desc: t(locale, 'contact.whatsappDesc'),
+    href: siteConfig.contact.whatsapp,
+    external: true,
+  },
+  {
+    icon: 'mail' as const,
+    title: t(locale, 'contact.emailTitle'),
+    desc: t(locale, 'contact.emailDesc'),
+    href: `mailto:${siteConfig.contact.email}`,
+    external: false,
+  },
+  {
+    icon: 'social' as const,
+    title: t(locale, 'contact.facebookTitle'),
+    desc: t(locale, 'contact.facebookDesc'),
+    href: siteConfig.contact.facebook,
+    external: true,
+  },
+];
+---
+
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">{t(locale, 'contact.kicker')}</span>
+      <h2 class="section-title">{t(locale, 'contact.heading')}</h2>
+      <p class="section-sub">{t(locale, 'contact.subtitle')}</p>
+    </div>
+
+    <div class="contact-channels">
+      {
+        channels.map((channel) => (
+          <a
+            class="glass channel reveal"
+            href={channel.href}
+            { ...(channel.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}) }
+          >
+            <div class="card-icon">
+              <Icon name={channel.icon} />
+            </div>
+            <h3>{channel.title}</h3>
+            <p>{channel.desc}</p>
+            <span class="btn btn-ghost">
+              {t(locale, 'contact.cta')}
+              <Icon name="arrow" />
+            </span>
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="contact-note">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+      {t(locale, 'contact.note')}
+    </p>
+  </div>
+</section>

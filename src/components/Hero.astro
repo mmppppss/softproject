@@ -1,0 +1,82 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const chips: string[] = t(locale, 'hero.chips', true);
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="glass-chip hero-badge">
+        <span class="dot"></span>
+        {t(locale, 'hero.badge')}
+      </span>
+
+      <h1 class="reveal-1">
+        {t(locale, 'hero.titleTop')}
+        <span class="accent">{t(locale, 'hero.titleAccent')}</span>
+      </h1>
+
+      <p class="hero-sub reveal-2">{t(locale, 'hero.subtitle')}</p>
+
+      <div class="hero-cta reveal-2">
+        <a class="btn btn-primary" href="#servicios">
+          {t(locale, 'hero.ctaPrimary')}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14" />
+            <path d="m13 6 6 6-6 6" />
+          </svg>
+        </a>
+        <a class="btn btn-ghost" href="#contacto">{t(locale, 'hero.ctaSecondary')}</a>
+      </div>
+
+      <ul class="hero-chips" aria-label="softproject services">
+        {
+          chips.map((chip) => <li class="glass-chip hero-chip">{chip}</li>)
+        }
+      </ul>
+    </div>
+
+    <div class="code-card glass reveal-3" aria-hidden="true">
+      <div class="code-head">
+        <span class="code-dot"></span>
+        <span class="code-dot"></span>
+        <span class="code-dot"></span>
+        <span class="code-title">softproject.dev</span>
+      </div>
+      <pre class="code-body"><code><span class="cm-comment">// {t(locale, 'hero.codeNote')}</span>
+<span class="cm-keyword">import</span> &#123; build &#125; <span class="cm-keyword">from</span> <span class="cm-string">'@softproject/studio'</span>;
+
+<span class="cm-keyword">const</span> <span class="cm-const">product</span> = <span class="cm-keyword">await</span> build(&#123;
+  web: <span class="cm-keyword">true</span>,
+  mobile: <span class="cm-keyword">true</span>,
+  desktop: <span class="cm-keyword">true</span>,
+  data: <span class="cm-string">'supabase → postgres'</span>,
+  quality: <span class="cm-string">'obsessive'</span>,
+&#125;);
+
+<span class="cm-const">product</span>.ship().on(<span class="cm-string">'2026'</span>);</code></pre>
+      <span class="hero-note">softproject.qzz.io</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  li {
+    list-style: none;
+  }
+</style>

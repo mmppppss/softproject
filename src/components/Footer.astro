@@ -1,0 +1,26 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+import siteConfig from '../site.config';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="logo" href="#inicio" aria-label="softproject">
+      <span class="logo-mark"><Icon name="leaf" /></span>
+      <span>soft</span><span>project</span>
+    </a>
+    <p class="footer-meta">
+      &copy; {year} softproject · {siteConfig.domain} · {t(locale, 'footer.rights')}
+    </p>
+    <p class="footer-built">{t(locale, 'footer.built')}</p>
+  </div>
+</footer>

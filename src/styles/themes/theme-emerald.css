@@ -1,0 +1,106 @@
+/* ==========================================================================
+   TEMA: EMERALD — verde esmeralda / teal + acento coral
+   --------------------------------------------------------------------------
+   Este archivo ES EL TEMA. Solo define *tokens semánticos* (variables CSS).
+   Los componentes usan EXCLUSIVAMENTE estas variables, nunca colores sueltos.
+
+   Cómo cambiar el tema (cambiar esmeralda por otro color):
+     1. Crea `src/styles/themes/theme-<nombre>.css` replicando esta estructura.
+     2. Cambia el import en `src/layouts/Layout.astro`.
+    Listo: todo el sitio se adapta sin tocar componentes.
+
+   Teoría del color aplicada:
+     - Base analógica: verde esmeralda (#10b981) y teal (#14b8a6) — vecinos
+       en la rueda de color (120º-200º), transmiten crecimiento y confianza.
+     - Acento complementario: coral (#ff7a5c) — opuesto del teal en la rueda
+       (~2-10º vs ~175-190º), usado con moderación para CTAs y detalles.
+   ========================================================================== */
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Superficies */
+  --bg: #061512;
+  --bg-elev: #0a1f1a;
+  --text: #e9f7f0;
+  --text-muted: #9fc4b6;
+  --text-faint: #6a9083;
+
+  /* Marca (verde) */
+  --primary: #34d399;
+  --primary-strong: #10b981;
+  --primary-deep: #0d9668;
+  --primary-soft: rgba(16, 185, 129, 0.14);
+  --on-primary: #04231b;
+
+  /* Acento (coral) */
+  --accent: #ff7a5c;
+  --accent-strong: #ff6b4a;
+  --accent-soft: rgba(255, 122, 92, 0.14);
+  --on-accent: #2a0803;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-bg-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-highlight: rgba(255, 255, 255, 0.2);
+  --glass-blur: 18px;
+
+  /* Sombras y orbes de fondo */
+  --shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.6);
+  --shadow-accent: 0 18px 50px -24px rgba(255, 122, 92, 0.35);
+  --orb-1: rgba(16, 185, 129, 0.42);
+  --orb-2: rgba(20, 184, 166, 0.3);
+  --orb-3: rgba(255, 122, 92, 0.16);
+
+  /* Navbar */
+  --navbar-bg: rgba(6, 21, 18, 0.62);
+
+  /* Línea del hero (grid) */
+  --grid-line: rgba(255, 255, 255, 0.035);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* Superficies */
+  --bg: #f1faf6;
+  --bg-elev: #ffffff;
+  --text: #07261e;
+  --text-muted: #4d7165;
+  --text-faint: #7c9d91;
+
+  /* Marca (verde) */
+  --primary: #059669;
+  --primary-strong: #047857;
+  --primary-deep: #065f46;
+  --primary-soft: rgba(5, 150, 105, 0.12);
+  --on-primary: #ffffff;
+
+  /* Acento (coral) */
+  --accent: #d9512e;
+  --accent-strong: #c24322;
+  --accent-soft: rgba(217, 81, 46, 0.12);
+  --on-accent: #ffffff;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.58);
+  --glass-bg-strong: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(4, 78, 59, 0.14);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --glass-blur: 18px;
+
+  /* Sombras y orbes de fondo */
+  --shadow: 0 24px 60px -32px rgba(4, 78, 59, 0.32);
+  --shadow-accent: 0 18px 50px -26px rgba(217, 81, 46, 0.4);
+  --orb-1: rgba(16, 185, 129, 0.28);
+  --orb-2: rgba(20, 184, 166, 0.22);
+  --orb-3: rgba(255, 122, 92, 0.14);
+
+  /* Navbar */
+  --navbar-bg: rgba(241, 250, 246, 0.72);
+
+  /* Línea del hero (grid) */
+  --grid-line: rgba(4, 78, 59, 0.05);
+}

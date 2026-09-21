@@ -1,0 +1,64 @@
+---
+/**
+ * Iconos SVG de línea (trazo actual heredado de `currentColor`).
+ * Sin emojis: todos los iconos del sitio pasan por este componente.
+ */
+interface Props {
+  name:
+    | 'web'
+    | 'mobile'
+    | 'desktop'
+    | 'database'
+    | 'wrench'
+    | 'reload'
+    | 'chat'
+    | 'mail'
+    | 'social'
+    | 'sun'
+    | 'moon'
+    | 'arrow'
+    | 'send'
+    | 'code'
+    | 'leaf';
+  className?: string;
+}
+
+const { name, className } = Astro.props;
+const paths: Record<Props['name'], string> = {
+  web: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  mobile:
+    '<rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/>',
+  desktop:
+    '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>',
+  database:
+    '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>',
+  wrench:
+    '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  reload:
+    '<path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/>',
+  chat:
+    '<path d="M21 12a8.5 8.5 0 0 1-8.5 8.5c-1.4 0-2.7-.33-3.86-.92L3 21l1.42-4.7a8.5 8.5 0 1 1 16.58-4.3z"/><path d="M8.5 11.5h7"/><path d="M8.5 14.5h4"/>',
+  mail:
+    '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/>',
+  social:
+    '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.5"/><path d="m8.2 13.2 7.6 3.5"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>',
+  moon: '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>',
+  arrow: '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
+  send: '<path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/>',
+  code: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+  leaf: '<path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 14-11 0 8-6 12-7 12z"/><path d="M4 21c3-4 6-6 9-7"/>',
+};
+---
+
+<svg
+  class:list={[className]}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.7"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  set:html={paths[name]}
+></svg>

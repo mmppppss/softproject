@@ -1,0 +1,40 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const projects: Array<{ category: string; name: string; desc: string; tags: string[] }> = t(
+  locale,
+  'projects.items',
+  true,
+);
+---
+
+<section class="section" id="proyectos">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">{t(locale, 'projects.kicker')}</span>
+      <h2 class="section-title">{t(locale, 'projects.heading')}</h2>
+      <p class="section-sub">{t(locale, 'projects.subtitle')}</p>
+    </div>
+
+    <div class="card-grid">
+      {
+        projects.map((project) => (
+          <article class="card project-card reveal">
+            <span class="project-category">{project.category}</span>
+            <h3>{project.name}</h3>
+            <p>{project.desc}</p>
+            <div class="card-footer">
+              {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

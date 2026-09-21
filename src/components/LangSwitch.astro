@@ -1,0 +1,30 @@
+---
+import { t, defaultLocale, locales } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+
+interface Props {
+  current: Locale;
+}
+
+const { current } = Astro.props;
+const target = locales.find((l) => l !== current) ?? defaultLocale;
+const href = target === defaultLocale ? '/' : `/${target}`;
+---
+
+<a class="lang-btn" href={href} aria-label={t(current, 'lang.switchLabel')}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    width="15"
+    height="15"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </svg>
+  <span>{t(current, 'lang.other')}</span>
+</a>

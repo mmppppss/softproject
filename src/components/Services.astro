@@ -1,0 +1,45 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const services: Array<{ icon: string; name: string; desc: string; tags: string[] }> = t(
+  locale,
+  'services.items',
+  true,
+);
+---
+
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">{t(locale, 'services.kicker')}</span>
+      <h2 class="section-title">{t(locale, 'services.heading')}</h2>
+      <p class="section-sub">{t(locale, 'services.subtitle')}</p>
+    </div>
+
+    <div class="card-grid">
+      {
+        services.map((service) => (
+          <article class="card reveal">
+            <div class="card-icon">
+              <Icon name={service.icon as any} />
+            </div>
+            <h3>{service.name}</h3>
+            <p>{service.desc}</p>
+            <div class="card-footer">
+              {service.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
