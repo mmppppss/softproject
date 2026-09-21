@@ -14,13 +14,13 @@ de software a medida: **web, móvil, escritorio y mantenimiento**.
 1. **Bilingüe ES/EN.** El español es el idioma por defecto y se sirve en `/`. El inglés
    se sirve en `/en`. No se añaden más idiomas sin acuerdo previo.
 2. **One-page.** Todo el contenido vive en una sola página con anclas:
-   `#inicio`, `#servicios`, `#stack`, `#proyectos`, `#contacto`.
+   `#inicio`, `#servicios`, `#proyectos`, `#contacto`.
 3. **Contacto estático** (sin backend): enlaces a WhatsApp, email y Facebook.
    Los valores reales se configuran en `src/site.config.ts`.
 4. **Tema oscuro + claro** con toggle persistente (`localStorage.sp-theme`) y respeto a
    `prefers-color-scheme` como valor inicial.
-5. **Solo el stack real** de la empresa en la sección Tecnología:
-   Astro, React, TypeScript, Node.js, Supabase, PostgreSQL, MySQL, React Native, Tauri, Electron.
+5. **Sin sección de stack/tecnologías.** El público del sitio no es técnico: las
+   tecnologías solo aparecen como etiquetas discretas dentro de los servicios y proyectos.
 
 ## Reglas no negociables
 
@@ -82,7 +82,7 @@ src/
   components/
     Site.astro            → composición one-page
     Navbar / Footer / LangSwitch
-    Hero / Services / Stack / Projects / Contact
+    Hero / Services / Projects / Contact
     Icon.astro            → banco de iconos SVG (prohibido usar emojis)
   react/ThemeToggle.tsx   → toggle oscuro/claro (React)
   styles/

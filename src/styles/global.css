@@ -419,7 +419,6 @@ p {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.2rem;
@@ -435,6 +434,7 @@ p {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
   color: var(--on-primary);
   box-shadow: 0 6px 18px -6px rgba(16, 185, 129, 0.5);
+  margin-right: 0.6rem;
 }
 
 .logo-mark svg {
@@ -718,56 +718,6 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   Stack
-   -------------------------------------------------------------------------- */
-.stack-group {
-  margin-bottom: 1.6rem;
-}
-
-.stack-group h3 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-  margin-bottom: 0.8rem;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.05rem;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-pill);
-  backdrop-filter: blur(12px);
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.chip::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-}
-
-.chip:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-/* --------------------------------------------------------------------------
    Proyectos
    -------------------------------------------------------------------------- */
 .project-card {
@@ -790,6 +740,32 @@ p {
   background: var(--accent-soft);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-pill);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--primary);
+  transition: color 0.2s ease;
+}
+
+.project-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.project-link:hover svg {
+  transform: translateX(4px);
 }
 
 /* --------------------------------------------------------------------------

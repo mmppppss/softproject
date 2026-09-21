@@ -17,7 +17,6 @@ export const es = {
   nav: {
     home: 'Inicio',
     services: 'Servicios',
-    stack: 'Tecnología',
     projects: 'Proyectos',
     contact: 'Contacto',
   },
@@ -54,7 +53,7 @@ export const es = {
         icon: 'desktop',
         name: 'Software de escritorio',
         desc: 'Aplicaciones de escritorio ligeras y multiplataforma para Windows, macOS y Linux con Tauri y Electron.',
-        tags: ['Tauri', 'Electron', 'Multiplataforma'],
+        tags: ['Java', 'React Native', 'Flet', 'Electron', 'Multiplataforma'],
       },
       {
         icon: 'database',
@@ -76,49 +75,33 @@ export const es = {
       },
     ],
   },
-  stack: {
-    kicker: 'Tecnología',
-    heading: 'Nuestro stack',
-    subtitle:
-      'Tecnologías modernas y probadas, elegidas por productividad, rendimiento y facilidad de mantenimiento.',
-    groups: [
-      {
-        name: 'Frontend y UI',
-        items: ['Astro', 'React', 'TypeScript', 'HTML & CSS', 'Vite'],
-      },
-      {
-        name: 'Backend y datos',
-        items: ['Node.js', 'Supabase', 'PostgreSQL', 'MySQL'],
-      },
-      {
-        name: 'Multiplataforma',
-        items: ['React Native', 'Tauri', 'Electron'],
-      },
-    ],
-  },
   projects: {
     kicker: 'Proyectos',
     heading: 'Trabajos destacados',
     subtitle:
       'Una muestra del tipo de productos que construimos. Los casos reales se documentan aquí del cliente al despliegue.',
+    view: 'Ver proyecto',
     items: [
       {
         category: 'Web',
-        name: 'Plataforma de reservas',
-        desc: 'Aplicación web de reservas en tiempo real con panel de administración, autenticación y datos en Supabase.',
-        tags: ['React', 'Supabase', 'PostgreSQL'],
+        name: 'Info Camiri - Plataforma de Noticias',
+        desc: 'Aplicación web de noticias con panel de administracion y autenticacion.',
+        tags: ['React', 'Markdown', 'MySQL'],
+        url: 'https://infocamiri.rf.gd',
       },
       {
         category: 'Móvil',
-        name: 'App móvil de entregas',
-        desc: 'App de reparto en iOS y Android con seguimiento GPS, notificaciones push y estado de pedidos en vivo.',
+        name: 'Rutas',
+        desc: 'App de grabado de rutas en Android con seguimiento GPS.',
         tags: ['React Native', 'Expo', 'Node.js'],
+        url: 'https://github.com/mmppppss/rutas',
       },
       {
         category: 'Escritorio',
-        name: 'ERP para pequeñas empresas',
-        desc: 'Sistema de gestión ligero y offline-first para inventario, facturación y clientes, listo para Windows y Linux.',
-        tags: ['Tauri', 'TypeScript'],
+        name: 'POS',
+        desc: 'Sistema de gestión ligero y offline-first para inventario y clientes, listo para Windows y Linux.',
+        tags: ['Java'],
+        url: 'https://github.com/mmppppss/pos',
       },
     ],
   },
@@ -138,7 +121,7 @@ export const es = {
   },
   footer: {
     rights: 'Todos los derechos reservados.',
-    built: 'Hecho con Astro, React y mucho café.',
+    built: '',
   },
   theme: {
     toggleLight: 'Activar tema claro',
@@ -159,7 +142,6 @@ export const en: typeof es = {
   nav: {
     home: 'Home',
     services: 'Services',
-    stack: 'Stack',
     projects: 'Projects',
     contact: 'Contact',
   },
@@ -218,49 +200,33 @@ export const en: typeof es = {
       },
     ],
   },
-  stack: {
-    kicker: 'Technology',
-    heading: 'Our stack',
-    subtitle:
-      'Modern, proven technologies chosen for productivity, performance and ease of maintenance.',
-    groups: [
-      {
-        name: 'Frontend & UI',
-        items: ['Astro', 'React', 'TypeScript', 'HTML & CSS', 'Vite'],
-      },
-      {
-        name: 'Backend & data',
-        items: ['Node.js', 'Supabase', 'PostgreSQL', 'MySQL'],
-      },
-      {
-        name: 'Cross-platform',
-        items: ['React Native', 'Tauri', 'Electron'],
-      },
-    ],
-  },
   projects: {
     kicker: 'Projects',
     heading: 'Featured work',
     subtitle:
       'A sample of the kind of products we build. Real cases are documented here from client to deployment.',
+    view: 'View project',
     items: [
       {
         category: 'Web',
-        name: 'Booking platform',
-        desc: 'Real-time booking web app with an admin dashboard, authentication and data on Supabase.',
-        tags: ['React', 'Supabase', 'PostgreSQL'],
+        name: 'Info Camiri - News Platform',
+        desc: 'Web news application with an admin panel and authentication.',
+        tags: ['React', 'Markdown', 'MySQL'],
+        url: 'https://infocamiri.rf.gd',
       },
       {
         category: 'Mobile',
-        name: 'Delivery mobile app',
-        desc: 'iOS and Android delivery app with GPS tracking, push notifications and live order status.',
+        name: 'Rutas',
+        desc: 'Android app for recording routes with GPS tracking.',
         tags: ['React Native', 'Expo', 'Node.js'],
+        url: 'https://github.com/mmppppss/rutas',
       },
       {
         category: 'Desktop',
-        name: 'ERP for small businesses',
-        desc: 'Lightweight offline-first management system for inventory, invoicing and customers, ready for Windows and Linux.',
-        tags: ['Tauri', 'TypeScript'],
+        name: 'POS',
+        desc: 'Lightweight offline-first management system for inventory and customers, ready for Windows and Linux.',
+        tags: ['Java'],
+        url: 'https://github.com/mmppppss/rutas',
       },
     ],
   },
@@ -280,7 +246,7 @@ export const en: typeof es = {
   },
   footer: {
     rights: 'All rights reserved.',
-    built: 'Built with Astro, React and a lot of coffee.',
+    built: '',
   },
   theme: {
     toggleLight: 'Switch to light theme',

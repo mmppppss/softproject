@@ -13,10 +13,10 @@ export const siteConfig = {
   locales: ['es', 'en'] as Locale[],
   /** Datos de contacto de la empresa. Actualiza los valores reales cuando los tengas. */
   contact: {
-    whatsapp: 'https://wa.me/34600000000',
-    whatsappDisplay: '+34 600 000 000',
-    email: 'hola@softproject.qzz.io',
-    facebook: 'https://www.facebook.com/softproject',
+    whatsapp: 'https://wa.me/59171688979',
+    whatsappDisplay: '+591 71688979',
+    email: 'ppozosoliz@gmail.com',
+    facebook: 'https://www.facebook.com/mmppppss/',
   },
 };
 
