@@ -538,12 +538,12 @@ p {
     align-items: stretch;
     gap: 0.35rem;
     padding: 1rem;
-    background: var(--navbar-bg);
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(48px) saturate(200%);
+    -webkit-backdrop-filter: blur(48px) saturate(200%);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-m);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), inset 0 1px 0 var(--glass-highlight);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
