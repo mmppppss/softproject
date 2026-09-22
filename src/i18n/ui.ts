@@ -17,7 +17,9 @@ export const es = {
   nav: {
     home: 'Inicio',
     services: 'Servicios',
+    how: 'Cómo trabajamos',
     projects: 'Proyectos',
+    faq: 'Preguntas frecuentes',
     contact: 'Contacto',
   },
   hero: {
@@ -105,6 +107,105 @@ export const es = {
       },
     ],
   },
+  intro: {
+    kicker: 'En palabras simples',
+    heading: 'Qué hacemos por tu negocio',
+    subtitle:
+      'La tecnología a tu favor, sin que tengas que saber de ella.',
+    items: [
+      {
+        icon: 'web',
+        title: 'Tu página web',
+        desc: 'Para que te encuentren en internet y muestres tus productos o servicios con buena imagen.',
+      },
+      {
+        icon: 'mobile',
+        title: 'Tu app móvil',
+        desc: 'Una aplicación en el móvil de tus clientes o de tu equipo, lista cuando la necesiten.',
+      },
+      {
+        icon: 'desktop',
+        title: 'Programas para tu negocio',
+        desc: 'Herramientas a tu medida para agilizar ventas, inventario, clientes y papeleo.',
+      },
+    ],
+  },
+  how: {
+    kicker: 'Cómo trabajamos',
+    heading: 'De la idea a la realidad, paso a paso',
+    subtitle: 'Sin complicaciones: así de simple es empezar con nosotros.',
+    steps: [
+      {
+        icon: 'idea',
+        title: 'Nos cuentas tu idea',
+        desc: 'Nos escribes por WhatsApp, email o Facebook y nos explicas qué necesitas.',
+      },
+      {
+        icon: 'design',
+        title: 'Proponemos y presupuestamos',
+        desc: 'Te decimos la mejor forma de hacerlo, el plazo y el precio, en lenguaje claro.',
+      },
+      {
+        icon: 'code',
+        title: 'Construimos y tú revisas',
+        desc: 'Desarrollamos el producto y te mostramos avances para que lo apruebes.',
+      },
+      {
+        icon: 'rocket',
+        title: 'Publicamos y te acompañamos',
+        desc: 'Lo lanzamos y seguimos a tu lado con mantenimiento y soporte.',
+      },
+    ],
+  },
+  audience: {
+    kicker: 'Para quién',
+    heading: 'A quién ayudamos',
+    subtitle: 'Trabajamos con negocios reales y necesidades concretas, en cualquier tamaño.',
+    items: [
+      {
+        icon: 'store',
+        title: 'Negocios locales',
+        desc: 'Página web y presencia en internet para que te encuentren y contacten, con WhatsApp para tus clientes.',
+      },
+      {
+        icon: 'cart',
+        title: 'Ventas y tiendas',
+        desc: 'Catálogo online y punto de venta (POS) para controlar productos, precios y ventas del día a día.',
+      },
+      {
+        icon: 'truck',
+        title: 'Repartos y logística',
+        desc: 'Apps para gestionar entregas, rutas de reparto y el seguimiento de tu flota.',
+      },
+    ],
+  },
+  faq: {
+    kicker: 'Preguntas',
+    heading: 'Dudas frecuentes',
+    subtitle: 'Lo que la mayoría pregunta antes de empezar.',
+    items: [
+      {
+        q: '¿Cuánto cuesta un proyecto?',
+        a: 'Depende del tamaño. Te enviamos un presupuesto claro y sin sorpresas para que decidas con calma.',
+      },
+      {
+        q: '¿Cuánto tarda en estar listo?',
+        a: 'Una página web puede estar en semanas; una app o un programa a medida, de uno a tres meses. Siempre te damos un plazo de antemano.',
+      },
+      {
+        q: '¿Necesito saber de tecnología?',
+        a: 'No. Nosotros nos encargamos de todo: dominio, diseño, publicación y mantenimiento. Tú solo nos cuentas la idea.',
+      },
+      {
+        q: '¿Qué pasa después de publicar mi página o app?',
+        a: 'Queda funcionando y, si quieres, la cuidamos con mantenimiento: actualizaciones, correcciones y mejoras.',
+      },
+      {
+        q: '¿Puedo contratar solo mantenimiento?',
+        a: 'Sí. Si ya tienes un sitio o programa hecho por otra persona, lo revisamos, lo arreglamos y lo mantenemos.',
+      },
+    ],
+  },
   contact: {
     kicker: 'Contacto',
     heading: 'Hablemos de tu proyecto',
@@ -142,7 +243,9 @@ export const en: typeof es = {
   nav: {
     home: 'Home',
     services: 'Services',
+    how: 'How it works',
     projects: 'Projects',
+    faq: 'FAQ',
     contact: 'Contact',
   },
   hero: {
@@ -227,6 +330,105 @@ export const en: typeof es = {
         desc: 'Lightweight offline-first management system for inventory and customers, ready for Windows and Linux.',
         tags: ['Java'],
         url: 'https://github.com/mmppppss/rutas',
+      },
+    ],
+  },
+  intro: {
+    kicker: 'In plain words',
+    heading: 'What we can do for your business',
+    subtitle:
+      "Explained without jargon: technology on your side, without you needing to know about it.",
+    items: [
+      {
+        icon: 'web',
+        title: 'Your website',
+        desc: 'So people find you online and you can show your products or services with a great image.',
+      },
+      {
+        icon: 'mobile',
+        title: 'Your mobile app',
+        desc: "An app on your customers' or your team's phone, ready whenever they need it.",
+      },
+      {
+        icon: 'desktop',
+        title: 'Programs for your business',
+        desc: 'Custom tools to speed up sales, inventory, customers and paperwork.',
+      },
+    ],
+  },
+  how: {
+    kicker: 'How we work',
+    heading: 'From idea to reality, step by step',
+    subtitle: 'No complications: this is how easy it is to start with us.',
+    steps: [
+      {
+        icon: 'idea',
+        title: 'Tell us your idea',
+        desc: 'Write to us on WhatsApp, email or Facebook and explain what you need.',
+      },
+      {
+        icon: 'design',
+        title: 'We propose and quote',
+        desc: 'We tell you the best way to do it, the timeline and the price, in plain language.',
+      },
+      {
+        icon: 'code',
+        title: 'We build and you review',
+        desc: 'We develop the product and show you progress so you can approve it.',
+      },
+      {
+        icon: 'rocket',
+        title: 'We launch and support you',
+        desc: 'We go live and stay by your side with maintenance and support.',
+      },
+    ],
+  },
+  audience: {
+    kicker: "Who it's for",
+    heading: 'Who we help',
+    subtitle: 'We work with real businesses and concrete needs, whatever the size.',
+    items: [
+      {
+        icon: 'store',
+        title: 'Local businesses',
+        desc: 'A website and online presence so customers find and contact you, with WhatsApp to reach you.',
+      },
+      {
+        icon: 'cart',
+        title: 'Sales and shops',
+        desc: 'An online catalog and point of sale (POS) to manage products, prices and day-to-day sales.',
+      },
+      {
+        icon: 'truck',
+        title: 'Delivery and logistics',
+        desc: 'Apps to manage deliveries, delivery routes and fleet tracking.',
+      },
+    ],
+  },
+  faq: {
+    kicker: 'Questions',
+    heading: 'Frequently asked questions',
+    subtitle: 'What most people ask before getting started.',
+    items: [
+      {
+        q: 'How much does a project cost?',
+        a: "It depends on the size. We send you a clear quote with no surprises, so you can decide at your own pace.",
+      },
+      {
+        q: 'How long does it take?',
+        a: 'A website can be ready in weeks; a custom app or program, in one to three months. We always give you a timeline upfront.',
+      },
+      {
+        q: 'Do I need to know about technology?',
+        a: 'No. We take care of everything: domain, design, deployment and maintenance. You just tell us your idea.',
+      },
+      {
+        q: 'What happens after my website or app goes live?',
+        a: "It stays running and, if you want, we take care of it with maintenance: updates, fixes and improvements.",
+      },
+      {
+        q: 'Can I hire only maintenance?',
+        a: 'Yes. If you already have a site or program built by someone else, we review it, fix it and maintain it.',
       },
     ],
   },

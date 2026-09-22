@@ -1,0 +1,36 @@
+---
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/ui';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const items: Array<{ q: string; a: string }> = t(locale, 'faq.items', true);
+---
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">{t(locale, 'faq.kicker')}</span>
+      <h2 class="section-title">{t(locale, 'faq.heading')}</h2>
+      <p class="section-sub">{t(locale, 'faq.subtitle')}</p>
+    </div>
+
+    <div class="faq-list">
+      {
+        items.map((item) => (
+          <details class="faq-item reveal">
+            <summary class="faq-question">
+              <span>{item.q}</span>
+              <Icon name="plus" />
+            </summary>
+            <p class="faq-answer">{item.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
