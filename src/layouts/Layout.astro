@@ -27,8 +27,23 @@ const canonical = `${siteConfig.url}${locale === siteConfig.defaultLocale ? '' :
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#061512" />
     <meta name="description" content={description} />
-	<meta name="color-scheme" content={locale === 'es' ? 'dark light' : 'dark light'} />
-	<meta property="og:image" content="/logotipo.svg">
+	<meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph (compartir en Facebook/WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="softproject" />
+    <meta property="og:locale" content={locale === 'en' ? 'en_US' : 'es_ES'} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteConfig.url}/logotipo.jpg`} />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteConfig.url}/logotipo.jpg`} />
 
     <title>{title}</title>
     <link rel="canonical" href={canonical} />
