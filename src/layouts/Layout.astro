@@ -27,7 +27,8 @@ const canonical = `${siteConfig.url}${locale === siteConfig.defaultLocale ? '' :
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#061512" />
     <meta name="description" content={description} />
-    <meta name="color-scheme" content={locale === 'es' ? 'dark light' : 'dark light'} />
+	<meta name="color-scheme" content={locale === 'es' ? 'dark light' : 'dark light'} />
+	<meta property="og:image" content="/logotipo.svg">
 
     <title>{title}</title>
     <link rel="canonical" href={canonical} />
