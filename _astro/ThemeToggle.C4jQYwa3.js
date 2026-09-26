@@ -1,0 +1,9 @@
+import{r as c}from"./index.-iFofLld.js";var l={exports:{}},s={};/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var x;function h(){if(x)return s;x=1;var e=Symbol.for("react.transitional.element"),u=Symbol.for("react.fragment");function i(a,t,r){var n=null;if(r!==void 0&&(n=""+r),t.key!==void 0&&(n=""+t.key),"key"in t){r={};for(var d in t)d!=="key"&&(r[d]=t[d])}else r=t;return t=r.ref,{$$typeof:e,type:a,key:n,ref:t!==void 0?t:null,props:r}}return s.Fragment=u,s.jsx=i,s.jsxs=i,s}var k;function m(){return k||(k=1,l.exports=h()),l.exports}var o=m();function p(){if(typeof document>"u")return"dark";const e=document.documentElement.getAttribute("data-theme");return e==="light"||e==="dark"?e:"dark"}function v({labels:e}){const[u,i]=c.useState("dark");c.useEffect(()=>{i(p())},[]);const a=()=>{i(r=>{const n=r==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",n);try{localStorage.setItem("sp-theme",n)}catch{}return n})},t=u==="dark";return o.jsx("button",{className:"icon-btn",type:"button","aria-label":t?e.dark:e.light,title:t?e.dark:e.light,onClick:a,children:t?o.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor","stroke-width":"1.7","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true",children:[o.jsx("circle",{cx:"12",cy:"12",r:"4"}),o.jsx("path",{d:"M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"})]}):o.jsx("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor","stroke-width":"1.7","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true",children:o.jsx("path",{d:"M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"})})})}export{v as default};
